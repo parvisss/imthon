@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tadbiro/firebase_options.dart';
 import 'package:tadbiro/views/screens/auth/login_screen.dart';
 import 'package:tadbiro/views/screens/home_screen.dart';
-import 'package:tadbiro/views/screens/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -52,7 +51,7 @@ class MainApp extends StatelessWidget {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   }
-                  return snapshot.hasData ? SplashScreen() : LoginScreen();
+                  return snapshot.hasData ? HomeScreen() : LoginScreen();
                 },
               ),
             );
