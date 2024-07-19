@@ -5,7 +5,9 @@ import 'dart:async';
 import 'package:tadbiro/views/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key,});
+  const SplashScreen({
+    super.key,
+  });
 
   @override
   // ignore: library_private_types_in_public_api
@@ -30,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/tadbiro.png', height: 150),
+            Image.asset('assets/images/tadbiro.png', height: 150),
             const SizedBox(height: 20),
             const Text(
               'Tadbiro',
