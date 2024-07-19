@@ -28,7 +28,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           passwordController.text,
           emailController.text,
         );
-        // ignore: use_build_context_synchronously
+        Navigator.pop(context);
         Navigator.pop(context);
       } on FirebaseAuthException catch (error) {
         Text(error.message ?? "Xatolik");

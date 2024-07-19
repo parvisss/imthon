@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:tadbiro/services/auth/auth_service.dart';
 
@@ -7,7 +8,7 @@ class SignOutConfirmationDialog extends StatelessWidget {
   Future<void> _signOut(BuildContext context) async {
     try {
       await AuthService().logOut();
-      Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+      // Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Failed to sign out: $e')),
@@ -18,8 +19,8 @@ class SignOutConfirmationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Sign Out'),
-      content: Text('Are you sure you want to sign out?'),
+      title: Text('Sign Out'.tr()),
+      content: Text('Are you sure you want to sign out?'.tr()),
       actions: [
         TextButton(
           onPressed: () {

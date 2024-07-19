@@ -14,11 +14,9 @@ class MyEvents extends StatefulWidget {
 
 class _MyEventsState extends State<MyEvents> {
   final PageController _pageController = PageController();
-  int _selectedIndex = 0;
 
   void _onPageChanged(int index) {
     setState(() {
-      _selectedIndex = index;
     });
   }
 

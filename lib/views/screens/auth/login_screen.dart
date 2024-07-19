@@ -22,6 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
           emailController.text,
           passwordController.text,
         );
+        Navigator.pop(context);
       } on FirebaseAuthException catch (error) {
         Text(error.message ?? "Xatolik");
       } catch (e) {
